@@ -2,20 +2,24 @@
 
 <Swatch color={solution}></Swatch>
 
-<input type="range" bind:value={input.hue} min=0 max=360 step=1/>
-<input type="number" bind:value={input.hue} min=0 max=360 step=1/>
+{#if round <= totalRounds}
+    <p>round {round} / {totalRounds}</p>
 
-<input type="range" bind:value={input.saturation}/>
-<input type="number" bind:value={input.saturation}/>
+    <input type="range" bind:value={input.hue} min=0 max=360 step=1/>
+    <input type="number" bind:value={input.hue} min=0 max=360 step=1/>
 
-<input type="range" bind:value={input.lightness}/>
-<input type="number" bind:value={input.lightness}/>
+    <input type="range" bind:value={input.saturation}/>
+    <input type="number" bind:value={input.saturation}/>
 
-<input type="submit" on:submit={save}/>
+    <input type="range" bind:value={input.lightness}/>
+    <input type="number" bind:value={input.lightness}/>
 
-<p>hue diff: {solution.hue - input.hue}</p>
-<p>saturation diff: {solution.saturation - input.saturation}</p>
-<p>lightness diff: {solution.lightness - input.lightness}</p>
+    <input type="submit" on:click={save}/>
+
+    <p>hue diff: {solution.hue - input.hue}</p>
+    <p>saturation diff: {solution.saturation - input.saturation}</p>
+    <p>lightness diff: {solution.lightness - input.lightness}</p>
+{/if}
 
 <script>
     import {store} from './store.js';
@@ -35,14 +39,11 @@
 		lightness: 0
     };
 
-    let rounds = 10;
+    const totalRounds = 10;
+    let round = 1;
 
 	function save() {
         history.push({solution, input});
-        rounds--;
-
-        if (rounds <= 0) {
-            alert('aight');
-        }
+        round++;
     }
 </script>
