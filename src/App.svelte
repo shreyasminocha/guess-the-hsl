@@ -1,6 +1,6 @@
 <h1>Guess the HSL</h1>
 
-<div class="swatch" style="background-color: hsl({solution.hue}, {solution.saturation}%, {solution.lightness}%);"></div>
+<Swatch color={solution}></Swatch>
 
 <input type="range" bind:value={input.hue} min=0 max=360 step=1/>
 <input type="number" bind:value={input.hue} min=0 max=360 step=1/>
@@ -19,6 +19,7 @@
 
 <script>
     import {store} from './store.js';
+    import Swatch from './components/Swatch.svelte';
 
     let solution;
     let history;
