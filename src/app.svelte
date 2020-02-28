@@ -45,7 +45,14 @@
     let round = 1;
 
 	function save() {
-        history.push({solution, input});
+        const solutionCopy = Object.assign({}, solution);
+        const inputCopy = Object.assign({}, input);
+
+        history.push({
+            solution: solutionCopy,
+            input: inputCopy
+        });
+
         round++;
     }
 </script>
