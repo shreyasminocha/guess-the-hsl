@@ -19,11 +19,14 @@
     <p>hue diff: {solution.hue - input.hue}</p>
     <p>saturation diff: {solution.saturation - input.saturation}</p>
     <p>lightness diff: {solution.lightness - input.lightness}</p>
+{:else}
+    <Results {history}></Results>
 {/if}
 
 <script>
     import {store} from './store.js';
     import Swatch from './components/Swatch.svelte';
+    import Results from './components/Results.svelte';
 
     let solution;
     let history;
