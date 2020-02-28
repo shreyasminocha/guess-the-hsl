@@ -13,6 +13,6 @@
 </table>
 
 <script>
-    import Swatch from './Swatch.svelte';
+    import Swatch from './swatch.svelte';
     export let history = [];
 </script>

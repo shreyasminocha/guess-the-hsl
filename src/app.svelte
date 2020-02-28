@@ -25,8 +25,8 @@
 
 <script>
     import {store} from './store.js';
-    import Swatch from './components/Swatch.svelte';
-    import Results from './components/Results.svelte';
+    import Swatch from './components/swatch.svelte';
+    import Results from './components/results.svelte';
 
     let solution;
     let history;
