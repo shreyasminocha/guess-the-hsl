@@ -24,23 +24,22 @@
 {/if}
 
 <script>
-    import {store} from './store.js';
     import Swatch from './components/swatch.svelte';
     import Results from './components/results.svelte';
 
-    let solution;
-    let history;
-
-    store.subscribe((value) => {
-        solution = value.solution;
-        history = value.history;
-    });
+    let solution = {
+		hue: 25,
+		saturation: 18,
+		lightness: 24
+    };
 
 	let input = {
-		hue: 0,
+        hue: 0,
 		saturation: 0,
 		lightness: 0
     };
+
+	let history = [];
 
     const totalRounds = 10;
     let round = 1;
