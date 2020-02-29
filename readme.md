@@ -2,4 +2,4 @@
 
 ## License
 
-[MIT License](https://mit-license.org/2020]
+[MIT License](https://shreyas.mit-license.org/2020)
