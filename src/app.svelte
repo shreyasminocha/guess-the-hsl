@@ -26,12 +26,9 @@
 <script>
     import Swatch from './components/swatch.svelte';
     import Results from './components/results.svelte';
+    import random from 'random-int';
 
-    let solution = {
-		hue: 25,
-		saturation: 18,
-		lightness: 24
-    };
+    let solution = randomColor();
 
 	let input = {
         hue: 0,
@@ -54,5 +51,15 @@
         });
 
         round++;
+
+        solution = randomColor();
+    }
+
+    function randomColor() {
+        return {
+            hue: random(0, 255),
+            saturation: random(0, 100),
+            lightness: random(0, 100)
+        };
     }
 </script>
