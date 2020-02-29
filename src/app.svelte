@@ -5,14 +5,26 @@
 
     <p>round {round} / {totalRounds}</p>
 
-    <input type="range" bind:value={input.hue} min=0 max=360 step=1/>
-    <input type="number" bind:value={input.hue} min=0 max=360 step=1/>
+    <fieldset>
+        <legend>Hue</legend>
 
-    <input type="range" bind:value={input.saturation}/>
-    <input type="number" bind:value={input.saturation}/>
+        <input type="range" name="hue" bind:value={input.hue} min=0 max=360 step=1/>
+        <input type="number" name="hue" bind:value={input.hue} min=0 max=360 step=1/>
+    </fieldset>
 
-    <input type="range" bind:value={input.lightness}/>
-    <input type="number" bind:value={input.lightness}/>
+    <fieldset>
+        <legend>Saturation</legend>
+
+        <input type="range" name="saturation" bind:value={input.saturation}/>
+        <input type="number" name="saturation" bind:value={input.saturation}/>
+    </fieldset>
+
+    <fieldset>
+        <legend>Lightness</legend>
+
+        <input type="range" name="lightness" bind:value={input.lightness}/>
+        <input type="number" name="lightness" bind:value={input.lightness}/>
+    </fieldset>
 
     <input type="submit" on:click={save}/>
 {:else}
