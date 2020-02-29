@@ -14,6 +14,10 @@ export default {
 		format: 'iife',
 		name: 'app',
 		file: 'public/build/bundle.js',
+		globals: {
+			'd3-color-difference': 'ciede2000',
+			convert: 'color-convert'
+		},
 	},
 	plugins: [
 		css({ output: "public/build/extra.css" }),

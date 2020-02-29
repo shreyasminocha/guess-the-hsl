@@ -8,22 +8,22 @@
     <fieldset>
         <legend>Hue</legend>
 
-        <input type="range" name="hue" bind:value={input.hue} min=0 max=360 step=1/>
-        <input type="number" name="hue" bind:value={input.hue} min=0 max=360 step=1/>
+        <input type="range" name="hue" bind:value={input[0]} min=0 max=360 step=1/>
+        <input type="number" name="hue" bind:value={input[0]} min=0 max=360 step=1/>
     </fieldset>
 
     <fieldset>
         <legend>Saturation</legend>
 
-        <input type="range" name="saturation" bind:value={input.saturation}/>
-        <input type="number" name="saturation" bind:value={input.saturation}/>
+        <input type="range" name="saturation" bind:value={input[1]}/>
+        <input type="number" name="saturation" bind:value={input[1]}/>
     </fieldset>
 
     <fieldset>
         <legend>Lightness</legend>
 
-        <input type="range" name="lightness" bind:value={input.lightness}/>
-        <input type="number" name="lightness" bind:value={input.lightness}/>
+        <input type="range" name="lightness" bind:value={input[2]}/>
+        <input type="number" name="lightness" bind:value={input[2]}/>
     </fieldset>
 
     <input type="submit" on:click={save}/>
@@ -39,21 +39,15 @@
     import '../node_modules/milligram/dist/milligram.min.css';
 
     let solution = randomColor();
-
-	let input = {
-        hue: 0,
-		saturation: 0,
-		lightness: 0
-    };
-
+	let input = [0, 0, 0];
 	let history = [];
 
     const totalRounds = 10;
     let round = 1;
 
 	function save() {
-        const solutionCopy = Object.assign({}, solution);
-        const inputCopy = Object.assign({}, input);
+        const solutionCopy = [...solution];
+        const inputCopy = [...input];
 
         history.push({
             solution: solutionCopy,
@@ -66,11 +60,11 @@
     }
 
     function randomColor() {
-        return {
-            hue: random(0, 255),
-            saturation: random(0, 100),
-            lightness: random(0, 100)
-        };
+        return [
+            random(0, 255),
+            random(0, 100),
+            random(0, 100)
+        ];
     }
 </script>
 

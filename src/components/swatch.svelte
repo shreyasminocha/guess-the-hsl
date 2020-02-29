@@ -1,12 +1,6 @@
 <script>
     export let width = 50;
-
-    export let color = {
-        hue: 0,
-        saturation: 0,
-        lightness: 0
-    };
-
+    export let color = [0, 0, 0];
     export let inline = true;
 </script>
 
@@ -14,7 +8,7 @@
     style="
         width: {width}px;
         height: {width}px;
-        background: hsl({color.hue}, {color.saturation}%, {color.lightness}%)
+        background: hsl({color[0]}, {color[1]}%, {color[2]}%)
     "
     class={inline ? '' : 'display'}
 />
