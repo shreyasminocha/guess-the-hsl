@@ -36,6 +36,8 @@
     import Results from './components/results.svelte';
     import random from 'random-int';
 
+    import '../node_modules/milligram/dist/milligram.min.css';
+
     let solution = randomColor();
 
 	let input = {

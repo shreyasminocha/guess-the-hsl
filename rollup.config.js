@@ -1,3 +1,4 @@
+import css from 'rollup-plugin-css-only';
 import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -15,6 +16,8 @@ export default {
 		file: 'public/build/bundle.js',
 	},
 	plugins: [
+		css({ output: "public/build/extra.css" }),
+
 		svelte({
 			dev: !production,
 			css: css => {
