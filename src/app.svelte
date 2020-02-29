@@ -1,8 +1,8 @@
 <h1>Guess the HSL</h1>
 
-<Swatch color={solution}></Swatch>
-
 {#if round <= totalRounds}
+    <Swatch color={solution}></Swatch>
+
     <p>round {round} / {totalRounds}</p>
 
     <input type="range" bind:value={input.hue} min=0 max=360 step=1/>
