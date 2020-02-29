@@ -36,7 +36,6 @@
 
 <script>
     import Swatch from './swatch.svelte';
-    import closeness from '../lib/closeness';
     import round from 'round-to';
     import convert from 'color-convert';
     import {differenceCiede2000 as ciede2000} from 'd3-color-difference';
