@@ -12,9 +12,9 @@
         <tr>
             <td><Swatch color={solution} width=25/></td>
             <td><Swatch color={input} width=25/></td>
-            <td>{round(closeness(255, solution.hue, input.hue), 4) * 100}</td>
-            <td>{round(closeness(100, solution.saturation, input.saturation), 4) * 100}</td>
-            <td>{round(closeness(100, solution.lightness, input.lightness), 4) * 100}</td>
+            <td>{round(closeness(255, solution.hue, input.hue)*100, 2)}</td>
+            <td>{round(closeness(100, solution.saturation, input.saturation)*100, 2)}</td>
+            <td>{round(closeness(100, solution.lightness, input.lightness)*100, 2)}</td>
             <td></td>
         </tr>
     {/each}
