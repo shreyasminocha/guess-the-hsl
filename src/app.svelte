@@ -15,10 +15,6 @@
     <input type="number" bind:value={input.lightness}/>
 
     <input type="submit" on:click={save}/>
-
-    <p>hue diff: {solution.hue - input.hue}</p>
-    <p>saturation diff: {solution.saturation - input.saturation}</p>
-    <p>lightness diff: {solution.lightness - input.lightness}</p>
 {:else}
     <Results {history}></Results>
 {/if}
