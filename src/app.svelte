@@ -1,7 +1,7 @@
 <h1>Guess the HSL</h1>
 
 {#if round <= totalRounds}
-    <Swatch color={solution}></Swatch>
+    <Swatch color={solution} inline={false}></Swatch>
 
     <p>round {round} / {totalRounds}</p>
 
@@ -73,3 +73,27 @@
         };
     }
 </script>
+
+<style>
+    fieldset {
+        margin: 0;
+        margin-bottom: 2em;
+    }
+
+    legend {
+        width: 100%;
+    }
+
+    input {
+        width: unset;
+    }
+
+    input[type = 'range'],
+    input[type = 'number'] {
+        display: inline;
+    }
+
+    input[type = 'number'] {
+        width: 7ch;
+    }
+</style>

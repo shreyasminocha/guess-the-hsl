@@ -36,3 +36,9 @@
 
     export let history = [];
 </script>
+
+<style>
+    td {
+        text-align: center;
+    }
+</style>
