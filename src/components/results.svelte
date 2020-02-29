@@ -1,14 +1,18 @@
 <table>
     <thead>
-        <td>Solution</td>
-        <td>Input</td>
+        <td colspan="2">Solution</td>
+        <td colspan="2">Input</td>
         <td>Score</td>
     </thead>
 
     {#each history as {solution, input}}
         <tr>
             <td><Swatch color={solution} width=25/></td>
+            <td><code>hsl({solution[0]}, {solution[1]}%, {solution[2]}%)</code></td>
+
             <td><Swatch color={input} width=25/></td>
+            <td><code>hsl({input[0]}, {input[1]}%, {input[2]}%)</code></td>
+
             <td>{
                 round(
                     100 - ciede2000(
@@ -41,7 +45,12 @@
 </script>
 
 <style>
-    td {
-        text-align: center;
+    thead td {
+        font-weight: bold;
+    }
+
+    code {
+        font-size: larger;
+        vertical-align: 0.5em;
     }
 </style>
