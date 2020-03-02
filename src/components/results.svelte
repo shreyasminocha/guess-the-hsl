@@ -1,8 +1,8 @@
 <table>
     <thead>
-        <td colspan="2">Solution</td>
-        <td colspan="2">Input</td>
-        <td>Score</td>
+        <th colspan="2">Solution</th>
+        <th colspan="2">Input</th>
+        <th>Score</th>
     </thead>
 
     {#each history as {solution, input}}
@@ -44,10 +44,6 @@
 </script>
 
 <style>
-    thead td {
-        font-weight: bold;
-    }
-
     code {
         font-size: larger;
         vertical-align: 0.5em;
