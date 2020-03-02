@@ -84,10 +84,13 @@
 
     input[type = 'range'],
     input[type = 'number'] {
-        display: inline;
+        display: block;
+        margin: 0 auto;
     }
 
     input[type = 'number'] {
         width: 7ch;
+        border: none;
+        text-align: center;
     }
 </style>
