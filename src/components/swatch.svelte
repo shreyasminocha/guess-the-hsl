@@ -4,15 +4,6 @@
     export let inline = true;
 </script>
 
-<div
-    style="
-        width: {width}px;
-        height: {width}px;
-        background: hsl({color[0]}, {color[1]}%, {color[2]}%)
-    "
-    class={inline ? '' : 'display'}
-/>
-
 <style>
     div {
         display: block;
@@ -23,3 +14,8 @@
         box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.5);
     }
 </style>
+
+<div
+    style=" width: {width}px; height: {width}px; background: hsl({color[0]}, {color[1]}%,
+    {color[2]}%);"
+    class={inline ? '' : 'display'} />
