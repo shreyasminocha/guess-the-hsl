@@ -4,28 +4,30 @@
     <label for="progress">Round {round} / {totalRounds}</label>
     <progress id="progress" value={round} max={totalRounds}></progress>
 
-    <Swatch color={solution} inline={false}></Swatch>
+    <div class="main">
+        <Swatch color={solution} inline={false}></Swatch>
 
-    <fieldset>
-        <legend>Hue</legend>
+        <fieldset>
+            <legend>Hue</legend>
 
-        <input type="range" name="hue" bind:value={input[0]} min=0 max=360 step=1/>
-        <input type="number" name="hue" bind:value={input[0]} min=0 max=360 step=1/>
-    </fieldset>
+            <input type="range" name="hue" bind:value={input[0]} min=0 max=360 step=1/>
+            <input type="number" name="hue" bind:value={input[0]} min=0 max=360 step=1/>
+        </fieldset>
 
-    <fieldset>
-        <legend>Saturation</legend>
+        <fieldset>
+            <legend>Saturation</legend>
 
-        <input type="range" name="saturation" bind:value={input[1]}/>
-        <input type="number" name="saturation" bind:value={input[1]}/>
-    </fieldset>
+            <input type="range" name="saturation" bind:value={input[1]}/>
+            <input type="number" name="saturation" bind:value={input[1]}/>
+        </fieldset>
 
-    <fieldset>
-        <legend>Lightness</legend>
+        <fieldset>
+            <legend>Lightness</legend>
 
-        <input type="range" name="lightness" bind:value={input[2]}/>
-        <input type="number" name="lightness" bind:value={input[2]}/>
-    </fieldset>
+            <input type="range" name="lightness" bind:value={input[2]}/>
+            <input type="number" name="lightness" bind:value={input[2]}/>
+        </fieldset>
+    </div>
 
     <input type="submit" on:click={save} value="Submit"/>
 {:else}
@@ -70,6 +72,14 @@
 </script>
 
 <style>
+    h1 {
+        margin-bottom: 1.25em;
+    }
+
+    .main {
+        margin-top: 5em;
+    }
+
     fieldset {
         margin: 0;
         margin-bottom: 2em;
