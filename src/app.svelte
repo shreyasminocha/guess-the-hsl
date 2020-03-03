@@ -1,9 +1,10 @@
 <h1>Guess the HSL</h1>
 
 {#if round <= totalRounds}
-    <Swatch color={solution} inline={false}></Swatch>
+    <label for="progress">Round {round} / {totalRounds}</label>
+    <progress id="progress" value={round} max={totalRounds}></progress>
 
-    <p>round {round} / {totalRounds}</p>
+    <Swatch color={solution} inline={false}></Swatch>
 
     <fieldset>
         <legend>Hue</legend>
@@ -26,7 +27,7 @@
         <input type="number" name="lightness" bind:value={input[2]}/>
     </fieldset>
 
-    <input type="submit" on:click={save}/>
+    <input type="submit" on:click={save} value="Submit"/>
 {:else}
     <Results {history}></Results>
 {/if}
