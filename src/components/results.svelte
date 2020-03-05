@@ -18,7 +18,8 @@
             display: none;
         }
 
-        th, td {
+        th,
+        td {
             display: block;
             padding-left: 0;
             border-bottom: 0;
@@ -39,9 +40,17 @@
             vertical-align: top;
         }
 
-        td:nth-child(1)::before { content: "Solution: "; }
-        td:nth-child(2)::before { content: "Input: "; }
-        td:nth-child(3)::before { content: "Score: "; }
+        td:nth-child(1)::before {
+            content: "Solution: ";
+        }
+
+        td:nth-child(2)::before {
+            content: "Input: ";
+        }
+
+        td:nth-child(3)::before {
+            content: "Score: ";
+        }
     }
 </style>
 
