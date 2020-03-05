@@ -14,6 +14,12 @@ body {
     text-align: center;
 }
 
+@media all and (max-width: 500px) {
+    body {
+        width: 85%;
+    }
+}
+
 a {
     color: rgb(0, 100, 200);
     text-decoration: none;

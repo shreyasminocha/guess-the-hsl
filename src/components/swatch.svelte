@@ -6,10 +6,11 @@
 
 <style>
     div {
-        display: block;
+        display: inline-block;
     }
 
     div.display {
+        display: block;
         margin: 2em auto;
         box-shadow: 0 0 3em 0 rgba(0, 0, 0, 0.5);
     }
