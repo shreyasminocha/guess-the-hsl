@@ -5,8 +5,8 @@
     "build": "rollup -c",
     "dev": "rollup -c -w",
     "start": "sirv public --port $PORT",
-    "lint": "prettier --write --plugin-search-dir=. src/**/* src/**",
-    "test": "prettier --check --plugin-search-dir=. src/**/* src/**"
+    "lint": "prettier --write '**/*.{svelte,html,css,js,md,yml,md}' --ignore-path .gitignore",
+    "test": "prettier --write '**/*.{svelte,html,css,js,md,yml,md}' --ignore-path .gitignore"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^11.0.0",
