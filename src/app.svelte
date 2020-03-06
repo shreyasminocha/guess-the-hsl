@@ -97,15 +97,39 @@
         <fieldset>
             <legend>Saturation</legend>
 
-            <input type="range" name="saturation" bind:value={input[1]} />
-            <input type="number" name="saturation" bind:value={input[1]} />
+            <input
+                type="range"
+                name="saturation"
+                bind:value={input[1]}
+                min="0"
+                max="100"
+                step="1" />
+            <input
+                type="number"
+                name="saturation"
+                bind:value={input[1]}
+                min="0"
+                max="100"
+                step="1" />
         </fieldset>
 
         <fieldset>
             <legend>Lightness</legend>
 
-            <input type="range" name="lightness" bind:value={input[2]} />
-            <input type="number" name="lightness" bind:value={input[2]} />
+            <input
+                type="range"
+                name="lightness"
+                bind:value={input[2]}
+                min="0"
+                max="100"
+                step="1" />
+            <input
+                type="number"
+                name="lightness"
+                bind:value={input[2]}
+                min="0"
+                max="100"
+                step="1" />
         </fieldset>
     </div>
 
